@@ -26,6 +26,18 @@ public class Main {
 
         }
         System.out.println("User Input Integers : \n"+integers);
+        if(integers.size()%2==1){
+            integers.remove(integers.size()-1);
+        }
 
+        for (int i = 0; i < integers.size()-1; i++) {
+            if(i%2==0 & integers.get(i)>=integers.get(i+1)){
+                goodIntegers.add(integers.get(i));
+                goodIntegers.add(integers.get(i+1));
+            }
+
+
+        }
+        System.out.println("Good Integers : \n"+goodIntegers);
     }
 }
